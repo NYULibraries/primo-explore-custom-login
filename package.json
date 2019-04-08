@@ -1,6 +1,6 @@
 {
   "name": "primo-explore-custom-login",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Customized login service",
   "main": "./dist/index.js",
   "scripts": {
@@ -36,6 +36,7 @@
     "karma": "^4.0.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
+    "karma-coveralls": "^2.1.0",
     "karma-jasmine": "^2.0.1",
     "karma-junit-reporter": "^1.2.0",
     "karma-sourcemap-loader": "^0.3.7",

@@ -1,6 +1,7 @@
 # primo-explore-custom-login
 
 [![CircleCI](https://circleci.com/gh/NYULibraries/primo-explore-custom-login.svg?style=svg)](https://circleci.com/gh/NYULibraries/primo-explore-custom-login)
+[![Coverage Status](https://coveralls.io/repos/github/NYULibraries/primo-explore-custom-login/badge.svg)](https://coveralls.io/github/NYULibraries/primo-explore-custom-login)
 
 ## Usage
 

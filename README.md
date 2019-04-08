@@ -1,5 +1,7 @@
 # primo-explore-custom-login
 
+[![CircleCI](https://circleci.com/gh/NYULibraries/primo-explore-custom-login.svg?style=svg)](https://circleci.com/gh/NYULibraries/primo-explore-custom-login)
+
 ## Usage
 **(Note: currently applies to alpha verson; will likely change in v1.0)**
 

@@ -7,7 +7,8 @@ module.exports = function (config) {
     reporters: [
       'spec',
       'junit',
-      'coverage'
+      'coverage',
+      'coveralls',
     ],
     browsers: ['ChromeHeadless', 'ChromiumHeadless_without_sandbox'],
     basePath: './',

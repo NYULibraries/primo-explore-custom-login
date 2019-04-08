@@ -1,9 +1,9 @@
 # primo-explore-custom-login
 
 [![CircleCI](https://circleci.com/gh/NYULibraries/primo-explore-custom-login.svg?style=svg)](https://circleci.com/gh/NYULibraries/primo-explore-custom-login)
+[![Coverage Status](https://coveralls.io/repos/github/NYULibraries/primo-explore-custom-login/badge.svg)](https://coveralls.io/github/NYULibraries/primo-explore-custom-login)
 
 ## Usage
-**(Note: currently applies to alpha verson; will likely change in v1.0)**
 
 1. Install
 `yarn add primo-explore-custom-login`
@@ -41,7 +41,7 @@ app
 |name|type|usage|
 |---|---|---|
 `pdsUrl`| `function` | A function that takes an angular [`$cookies` service object](https://docs.angularjs.org/api/ngCookies/service/$cookies) and returns url string for the PDS API for getting user information.
-`callback` | `function` | A callback function that takes a `response` object and an `$window` object for convenient usage.
+`callback` | `function` | A callback function that takes a `response` object and an `$window` object for convenient usage. When the Promise resolves, the return value of `callback` is returned.
 `timeout` | `integer` | The time limit before an API fetch fails
 `mockUserConfig`| `Object` | Settings for mocking a user (especially for offline development and testing)
 
@@ -51,17 +51,17 @@ All of the functionality of this module is contained in the `primoExploreCustomL
 
 ### `fetchPDSUser`
 
-This function is asynchronous and returns an AngularJS promise (see [$http documentation](https://docs.angularjs.org/api/ng/service/$http))
+This function is asynchronous and returns an AngularJS Promise (see [$http documentation](https://docs.angularjs.org/api/ng/service/$http))
 
 The first time fetchPDSUser is called, the function fetches the user data via the PDS API (as configured). This value is then cached throughout the user's session within the SPA. Exiting or refreshing the page will require a new PDS API call to get user data.
 
 If within the same session multiple components execute `fetchPDSUser` before the request returns, the promise of the first `$http` request is returned and handled in a similarly asynchronous manner. This means you can safely call `fetchPDSUser` from as many components as you want without worrying about redundate API calls!
 
-Once the user is fetched, subsequent `fetchPDSUser` calls simply return a resolved promised of the user. The user is represented as a POJO with properties based on the `selectors` set in the configuration.
+Once the user is fetched, subsequent `fetchPDSUser` calls simply return a resolved Promise of the result of your `callback` function.
 
 `fetchPDSUser` relies on the `PDS_HANDLE` cookie value in Primo, so it is imperative that your library and `pds` are on the same domain for the function to properly work.
 
-`mockUserConfig` values will allow you to mock a user, which is especially useful within a devleopment environment; as long as you are logged in, the `fetchPDSUser` function will instead return whatever is set in the `user` value, as long as `enabled` is set to `true`. The `delay` parameter allows you to set a specific amount of time to delay the resolved promise, to better observe and experiment with delayed API behavior.
+`mockUserConfig` values will allow you to mock a user, which is especially useful within a devleopment environment; as long as you are logged in, the `fetchPDSUser` function will instead return whatever is set in the `user` value, as long as `enabled` is set to `true`. The `delay` parameter allows you to set a specific amount of time to delay the resolved Promise, to better observe and experiment with delayed API behavior.
 
 ```js
 // config

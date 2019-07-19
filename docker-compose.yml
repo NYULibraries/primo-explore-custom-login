@@ -20,3 +20,7 @@ services:
     # volumes:
     #   - ./src/:/app/src/
     #   - ./karma.conf.js:/app/karma.conf.js
+  pack:
+    build:
+      context: .
+    command: yarn publish-dry-run

@@ -1,2 +1,2 @@
-require('./js/primoExploreCustomLogin.module.js');
-module.exports = 'primoExploreCustomLogin';
+import './js/primoExploreCustomLogin.module.js';
+export default 'primoExploreCustomLogin';

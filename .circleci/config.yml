@@ -13,8 +13,8 @@ jobs:
     - run:
         name: Run unit tests
         command: |
-        docker-compose run test
-        docker cp "$(docker ps -q -a -l -f name=test)":/app/test-results ./test-results
+          docker-compose run test
+          docker cp "$(docker ps -q -a -l -f name=test)":/app/test-results ./test-results
     - store_test_results:
         path: test-results
   build-and-pack:

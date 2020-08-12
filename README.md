@@ -17,7 +17,7 @@ let app = angular.module('viewCustom', [
 ```
 3. Add component to `prmUserAreaExpandableAfter`.
 
-This component has no visible effect, but is required in order to 'capture' login functions and other information from the `<prm-user-area-expandable>` component. **Note:** This used to used `<prm-authentication>` until that disappeared with a 2020 serivce pack upgrade.
+This component has no visible effect, but is required in order to 'capture' login functions and other information from the `<prm-user-area-expandable>` component. **Note:** This used to used `<prm-authentication>` until that disappeared with a 2020 service pack upgrade.
 
 ```js
 app

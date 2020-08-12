@@ -15,13 +15,13 @@ let app = angular.module('viewCustom', [
   'primoExploreCustomLogin',
 ]);
 ```
-3. Add component to `prmAuthenticationAfter`.
+3. Add component to `prmUserAreaExpandableAfter`.
 
-This component has no visible effect, but is required in order to 'capture' login functions and other information from the `<prm-authentication>` component.
+This component has no visible effect, but is required in order to 'capture' login functions and other information from the `<prm-user-area-expandable>` component. **Note:** This used to used `<prm-authentication>` until that dissappeared with a 2020 serivce pack upgrade.
 
 ```js
 app
-  .component('prmAuthenticationAfter', {
+  .component('prmUserAreaExpandableAfter', {
     template: `<primo-explore-custom-login></primo-explore-custom-login>`
   })
 ```

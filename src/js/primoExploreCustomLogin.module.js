@@ -7,7 +7,7 @@ angular
   .component('primoExploreCustomLogin', {
     controller: customLoginController,
     require: {
-      parentCtrl: '^prmAuthentication'
+      parentCtrl: '^prmUserAreaExpandable'
     }
   })
   .service('customLoginConfigService', ['primoExploreCustomLoginConfig', function (config) {
@@ -22,7 +22,7 @@ angular
       }
     }, config));
   }])
-  // Injects prmAuthentication's handleLogin as a global service
+  // Injects prmUserAreaExpandable's handleLogin as a global service
   .service('primoExploreCustomLoginService', [
     '$window',
     '$http',
@@ -88,7 +88,8 @@ function customLoginController() {
   ctrl.$onInit = function () {
     store.login = ctrl.parentCtrl.handleLogin.bind(ctrl.parentCtrl);
     store.logout = ctrl.parentCtrl.handleLogout.bind(ctrl.parentCtrl);
-    store.isLoggedIn = ctrl.parentCtrl.isLoggedIn;
+    // Note the parentCtrl changed this function to be called isSignedIn,
+    // but we decided to keep it isLoggedIn in our implementation
+    store.isLoggedIn = ctrl.parentCtrl.isSignedIn;
   };
 }
-

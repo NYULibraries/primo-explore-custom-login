@@ -76,9 +76,9 @@ function primoExploreCustomLoginService($window, $http, $timeout, $cookies, conf
     get isLoggedIn() {
       if (config.mockUserConfig.enabled) {
         // returns mock user's isLoggedIn value strictly if true or false explicitly. Otherwise, use store value.
-        return config.mockUserConfig.isLoggedIn === true || (config.mockUserConfig.isLoggedIn === false ? false : store.isLoggedIn);
+        return config.mockUserConfig.isLoggedIn === true || (config.mockUserConfig.isLoggedIn === false ? false : store.isLoggedIn());
       }
-      return store.isLoggedIn;
+      return store.isLoggedIn();
     }
   };
 }
@@ -90,6 +90,6 @@ function customLoginController() {
     store.logout = ctrl.parentCtrl.handleLogout.bind(ctrl.parentCtrl);
     // Note the parentCtrl changed this function to be called isSignedIn,
     // but we decided to keep it isLoggedIn in our implementation
-    store.isLoggedIn = ctrl.parentCtrl.isSignedIn();
+    store.isLoggedIn = ctrl.parentCtrl.isSignedIn.bind(ctrl.parentCtrl);
   };
 }

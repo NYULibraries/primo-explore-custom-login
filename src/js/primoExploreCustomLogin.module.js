@@ -90,6 +90,6 @@ function customLoginController() {
     store.logout = ctrl.parentCtrl.handleLogout.bind(ctrl.parentCtrl);
     // Note the parentCtrl changed this function to be called isSignedIn,
     // but we decided to keep it isLoggedIn in our implementation
-    store.isLoggedIn = ctrl.parentCtrl.isSignedIn;
+    store.isLoggedIn = ctrl.parentCtrl.isSignedIn();
   };
 }

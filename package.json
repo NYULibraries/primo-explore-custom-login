@@ -1,6 +1,6 @@
 {
   "name": "primo-explore-custom-login",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Customized login service",
   "main": "./dist/index.js",
   "scripts": {

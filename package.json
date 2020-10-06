@@ -47,5 +47,8 @@
   },
   "dependencies": {
     "angular-cookies": "1.6.3"
+  },
+  "resolutions" :{
+    "minimist": "^0.2.1"
   }
 }

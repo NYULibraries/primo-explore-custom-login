@@ -1,6 +1,6 @@
 {
   "name": "primo-explore-custom-login",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Customized login service",
   "main": "./dist/index.js",
   "scripts": {
@@ -47,10 +47,5 @@
   },
   "dependencies": {
     "angular-cookies": "1.6.3"
-  },
-  "resolutions" :{
-    "minimist": "^0.2.1",
-    "kind-of": "^6.0.3",
-    "serialize-javascript": "^3.1.0"
   }
 }

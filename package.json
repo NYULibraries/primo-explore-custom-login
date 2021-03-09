@@ -1,6 +1,6 @@
 {
   "name": "primo-explore-custom-login",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Customized login service",
   "main": "./dist/index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-istanbul": "^5.1.1",
     "jasmine-core": "^3.3.0",
-    "karma": "^4.0.1",
+    "karma": "^6.1.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage-istanbul-reporter": "^2.1.0",
     "karma-coveralls": "^2.1.0",
@@ -46,7 +46,8 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
-    "angular-cookies": "1.6.3"
+    "angular-cookies": "1.6.3",
+    "socket.io": "^2.4.0"
   },
   "resolutions": {
     "minimist": "^0.2.1",

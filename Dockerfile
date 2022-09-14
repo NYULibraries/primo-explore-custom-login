@@ -1,4 +1,4 @@
-FROM quay.io/nyulibraries/chromium_headless_node:12.22.6-chromium_81.0.4044
+FROM quay.io/nyulibraries/chromium_headless_node:14.20.0-chromium_102.0.5005
 
 ENV INSTALL_PATH /app/
 
